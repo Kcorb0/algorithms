@@ -1,11 +1,22 @@
 import random as rd
 
-inpsize = 30
-input_nums = list(range(inpsize))
-rd.shuffle(input_nums)
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        # Initialize the starting key and set variable 
+        # for prior key index
+        key = arr[i]
+        j = i - 1
+        # Move any elements that are greater than the key
+        # one index position ahead of their current pos
+        while j >= 0 and arr[j] > key:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+    return arr
 
-print(input_nums)
+inpsize = 10
+input_arr = list(range(inpsize))
+rd.shuffle(input_arr)
 
-
-def insertion_sort():
-    return None
+print(f'Input: {input_arr}')
+print(f'Output: {insertion_sort(input_arr)}')
