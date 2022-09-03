@@ -1,14 +1,5 @@
-from cgi import test
 import time
 import random as rd
-
-# What is a peak finder?
-"""
-Array/matrix of a-i numbers can be that can be positive or negative. 
-A peak finder algorithm will find the peak or highest number.
-One-Dimension Example:
-Position 2 is a peak if (b >= a and b >= c)
-"""
 
 array_example1d = [2, 2, 6, 2, 2, 0, 5, 4, 9, 2]
 
