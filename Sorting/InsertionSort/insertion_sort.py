@@ -1,8 +1,9 @@
 import random as rd
 
+
 def insertion_sort(arr):
     for i in range(1, len(arr)):
-        # Initialize the starting key and set variable 
+        # Initialize the starting key and set variable
         # for prior key index
         key = arr[i]
         j = i - 1
@@ -14,9 +15,10 @@ def insertion_sort(arr):
         arr[j + 1] = key
     return arr
 
+
 inpsize = 10
 input_arr = list(range(inpsize))
 rd.shuffle(input_arr)
 
-print(f'Input: {input_arr}')
-print(f'Output: {insertion_sort(input_arr)}')
+print(f"Input: {input_arr}")
+print(f"Output: {insertion_sort(input_arr)}")
