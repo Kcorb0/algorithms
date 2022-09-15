@@ -10,7 +10,7 @@ def insertion_sort_reversed(arr):
         key = arr[i]
         j = i - 1
         # Move any elements that are less than the key
-        # one index position ahead of their current pos
+        # one index position ahead of their current posNo
         while j >= 0 and arr[j] < key:
             arr[j + 1] = arr[j]
             j -= 1
