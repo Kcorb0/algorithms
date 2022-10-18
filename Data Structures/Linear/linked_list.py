@@ -10,25 +10,39 @@ class Node:
         self.next = next
 
 
-n1 = Node(5)
-
-print(n1.data)
-
-
 class LinkedList:
     def __init__(self):
         self.head = None
 
     def add(self, data):
-        new_node = data
+        new_node = Node(data)
 
-        if self.head != None:
+        if self.head:
             current = self.head
 
-            while current.next != None:
-                current.next = new_node
+            # Cycling through nodes until there is no reference
+            while current.next:
+                current = current.next
 
-            current.next = new_node
+            current = new_node
 
         else:
             self.head = new_node
+
+    def printll(self):
+        current = self.head
+
+        while current.next:
+            print(current)
+            current = current.next
+
+
+test_ll = LinkedList()
+test_ll.add(2)
+test_ll.add(3)
+test_ll.add(5)
+test_ll.add(7)
+test_ll.add(9)
+test_ll.add(11)
+
+print(test_ll.printll())
