@@ -4,7 +4,7 @@ import random as rd
 
 class Node:
     # Constructer with one data element and the next node reference
-    def __init__(self, data, next=None):
+    def __init__(self, data=None, next=None):
 
         self.data = data
         self.next = next
@@ -24,7 +24,7 @@ class LinkedList:
             while current.next:
                 current = current.next
 
-            current = new_node
+            current.next = new_node
 
         else:
             self.head = new_node
@@ -32,8 +32,8 @@ class LinkedList:
     def printll(self):
         current = self.head
 
-        while current.next:
-            print(current)
+        while current:
+            print(current.data)
             current = current.next
 
 
