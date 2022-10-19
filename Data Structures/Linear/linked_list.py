@@ -1,11 +1,8 @@
 # Singly linked list implementation
-import random as rd
-
 
 class Node:
     # Constructer with one data element and the next node reference
     def __init__(self, data=None, next=None):
-
         self.data = data
         self.next = next
 
@@ -16,22 +13,17 @@ class LinkedList:
 
     def add(self, data):
         new_node = Node(data)
-
         if self.head:
             current = self.head
-
             # Cycling through nodes until there is no reference
             while current.next:
                 current = current.next
-
             current.next = new_node
-
         else:
             self.head = new_node
 
     def printll(self):
         current = self.head
-
         while current:
             print(current.data)
             current = current.next
