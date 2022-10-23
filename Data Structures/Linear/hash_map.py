@@ -5,7 +5,7 @@ def twoSum(nums, target):
 
     # Init the hashmap, use this to store a past occurance of a number
 
-    hashmap = {}
+    hashmap = {}  # Val : Index
 
     # Loop through the given array
     # If the target number - current number = a number that already exists in the hashtable
@@ -14,7 +14,7 @@ def twoSum(nums, target):
     for idx, n in enumerate(nums):
         check = target - n
 
-        if check in hashmap.keys():
+        if check in hashmap:
             return [hashmap[check], idx]
 
         # Store value and location in array in the hashmap
