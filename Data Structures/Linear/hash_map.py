@@ -22,3 +22,9 @@ def twoSum(nums, target):
             hashmap[n] = idx
 
     return "There is an error"
+
+
+check = list("peter")
+check.pop()
+
+print(check)
