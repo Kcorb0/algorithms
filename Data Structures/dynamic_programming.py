@@ -1,20 +1,21 @@
-# Fib example with recursion
+def climbStairs(n):
 
+    # MEMOIZATION
+    # subproblems, key = arg to function, value = return value
 
-def nthfib(n):
+    def climb(n, subproblems={}):
 
-    # Base case
-    if n == 0:
-        return 0
-    if n == 1:
-        return 1
+        if n in subproblems:
+            return subproblems[n]
 
-    return nthfib(n - 1) + nthfib(n - 2)
+        # BASE CASE
+        if n <= 1:
+            return 1
 
+        # STORE PROBLEM
+        subproblems[n] = climb(n - 1) + climb(n - 2)
 
-print(nthfib(1))
-print(nthfib(2))
-print(nthfib(3))
-print(nthfib(4))
-print(nthfib(5))
-print(nthfib(6))
+        # RECURSIVE CASE
+        return subproblems[n]
+
+    return climb(n)
