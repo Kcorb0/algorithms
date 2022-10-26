@@ -5,6 +5,7 @@ def climbStairs(n):
 
     def climb(n, subproblems={}):
 
+        # RETURN EXISTING SUB PROBLEMS
         if n in subproblems:
             return subproblems[n]
 
